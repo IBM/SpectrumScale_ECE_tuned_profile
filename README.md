@@ -8,11 +8,23 @@ NOTE: For detailed information on how to add this profile to the system please c
 
 ##### Once you have the directory spectrumscale-ece from this repo:
 
-- copy it into */etc/tuned/*
+
+**Redhat 8.X instructions**
+- copy the directory profile with *_RH8* ending it into */etc/tuned/* as */etc/tuned/spectrumscale-ece/*
 - start if not already running tuned daemon *systemctl start tuned*
 - enable tuned daemon *systemctl enable tuned*
 - apply the profile *tuned-adm profile spectrumscale-ece*
 - verify the system is compliant with the profile *tuned-adm verify*
+- If verify shows issues check the logs mentioned to figure out what is the issue
+
+
+**Redhat 7.X instructions**
+- copy the directory profile with *_RH7* ending it into */etc/tuned/* as */etc/tuned/spectrumscale-ece/*
+- start if not already running tuned daemon *systemctl start tuned*
+- enable tuned daemon *systemctl enable tuned*
+- apply the profile *tuned-adm profile spectrumscale-ece*
+- verify the system is compliant with the profile *tuned-adm verify*
+- If verify shows issues check the logs mentioned to figure out what is the issue
 
 
 
